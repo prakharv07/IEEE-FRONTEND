@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IEEE Frontend Fiésta</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo-section"><a href="#">LOGO</a></div>
+
+      <div class="links">
+        <div class="general"><a href="#">CONTACT</a></div>
+        <div class="divider">|</div>
+        <button
+          class="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <svg
+            stroke="white"
+            fill="none"
+            class="hamburger"
+            viewBox="-10 -10 120 120"
+            width="70"
+          >
+            <path
+              class="line"
+              d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"
+              stroke-width="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <nav class="nav-hidden">
+      <div class="wrapper-nav">
+<<<<<<< HEAD
+        <div class="water-svg">
+          <div class="container">
+            <div id="water" class="water filter-active flow-active"></div>
+          </div>
+
+          <!-- Water Filter -->
+          <svg width="0" height="0">
+            <filter id="water-filter">
+              <feTurbulence
+                id="feTurb"
+                type="fractalNoise"
+                baseFrequency="0.01 0.01"
+                seed="7"
+                numOctaves="2"
+              />
+              <animate
+                xlink:href="#feTurb"
+                attributeName="baseFrequency"
+                dur="40s"
+                keyTimes="0;0.5;1"
+                values="0.008 0.015;0.015 0.008;0.008 0.015"
+                repeatCount="indefinite"
+              />
+              <!-- Remove Displacement Map for Noise Texture -->
+              <feDisplacementMap id="feDisp" in="SourceGraphic" scale="150" />
+            </filter>
+          </svg>
+        </div>
+
+=======
+        
+>>>>>>> bc59e2afe544e1fb264353b606d891e2d5408dbc
+        <div class="links">
+          <a class="options" aria-colcount="1" href="#">HOME</a>
+          <a class="options" aria-colcount="2" href="#">ABOUT</a>
+          <a class="options" aria-colcount="3" href="#">DETAILS</a>
+          <a class="options" aria-colcount="4" href="#">CONTACTS</a>
+        </div>
+        <div class="details">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+            necessitatibus maiores eaque suscipit porro eius temporibus sequi
+            aliquid, eos animi.
+          </p>
+          <div class="counter">01</div>
+        </div>
+      </div>
+      <div class="wrapper-social">
+        <div class="description">WE DO THIS</div>
+        <div class="social-links">
+          <a href="#">INSTAGRAM</a>
+          <a href="#">FACEBOOK</a>
+        </div>
+        <div class="year"></div>
+      </div>
+    </nav>
+
+    <section class="main"></section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">
+              Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. Necessitatibus, suscipit
+              reiciendis corporis tempora debitis nulla tempore. Quis voluptas
+              dolor, dicta distinctio eaque iusto, debitis perferendis, quisquam
+              alias accusamus hic aperiam inventore eligendi fugit facilis
+              repellat expedita doloribus. Fugit, quasi voluptate?
+            </p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+              <li>
+                <a href="http://scanfcode.com/category/front-end-development/"
+                  >UI Design</a
+                >
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/back-end-development/"
+                  >PHP</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://scanfcode.com/category/java-programming-language/"
+                  >Java</a
+                >
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/android/">Android</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/templates/">Templates</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/about/">About Us</a></li>
+              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+              <li>
+                <a href="http://scanfcode.com/contribute-at-scanfcode/"
+                  >Contribute</a
+                >
+              </li>
+              <li>
+                <a href="http://scanfcode.com/privacy-policy/"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">All Rights Reserved by</p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li>
+                <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a>
+              </li>
+              <li>
+                <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <div id="pointer"></div> -->
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+    <!-- JS FILE -->
+    <script src="script.js"></script>
+  </body>
+</html>

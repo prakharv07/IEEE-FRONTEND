@@ -1,0 +1,227 @@
+/* -------- CSS RESET ---------- */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border-radius: 0;
+}
+
+/* pointer */
+#pointer {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: 0.25s;
+  transition-timing-function: cubic-bezier(0.4, 0.6, 0.6, 0.8);
+  z-index: 2000;
+  pointer-events: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-size: cover;
+  background: black;
+  position: relative;
+  color: white;
+}
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: #b2b2b2;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+/* NAVBAR */
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  font-family: sans-serif;
+  z-index: 1000;
+}
+.nav:has(.button[aria-expanded=true]) ~ .nav-hidden {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.nav:has(*:hover) ~ #pointer {
+  transform: scale(2);
+  transition: 0.1s;
+}
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+.nav .logo-section {
+  font-weight: 600;
+  font-size: 2rem;
+}
+.nav .links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* Hamburger */
+}
+.nav .links .divider {
+  font-size: 2rem;
+}
+.nav .links .general {
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+.nav .links .button {
+  cursor: pointer;
+  --button-color: #777;
+  overflow: hidden;
+  background: none;
+}
+.nav .links .button .line {
+  stroke-dasharray: 60 31 60 300;
+  /* 60line 30gap 60line 300gap */
+  transition: 1s;
+}
+.nav .links .button[aria-expanded=true] .line {
+  stroke-dasharray: 60 105 60 300;
+  stroke-dashoffset: -90;
+}
+.nav .links .button .hamburger {
+  transition: transform 1s;
+}
+.nav .links .button[aria-expanded=true] .hamburger {
+  transform: translate(2px, -2px) rotate(0.125turn);
+}
+
+/* NAVBAR HIDDEN */
+.nav-hidden {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: steelblue;
+  padding: 8rem 33px 5rem 33px;
+  font-family: sans-serif;
+  -webkit-clip-path: polygon(11% 0, 89% 0, 100% 0, 0 0);
+          clip-path: polygon(11% 0, 89% 0, 100% 0, 0 0);
+  transition: -webkit-clip-path 1s ease-in-out;
+  transition: clip-path 1s ease-in-out;
+  transition: clip-path 1s ease-in-out, -webkit-clip-path 1s ease-in-out;
+}
+.nav-hidden:has(* > *:hover) ~ #pointer {
+  transform: scale(4);
+  transition: 0.1s;
+}
+.nav-hidden .wrapper-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-hidden .wrapper-nav .links {
+  display: flex;
+  flex-direction: column;
+  font-size: 6rem;
+  gap: 4px;
+}
+.nav-hidden .wrapper-nav .links a {
+  color: white;
+  text-decoration: none;
+}
+.nav-hidden .wrapper-nav .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.nav-hidden .wrapper-nav .details p {
+  max-width: 260px;
+}
+.nav-hidden .wrapper-nav .details .counter {
+  font-size: 8rem;
+}
+.nav-hidden .wrapper-social {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  padding: 0 22px 0 5px;
+}
+.nav-hidden .wrapper-social a {
+  text-decoration: none;
+  color: white;
+}
+.nav-hidden .wrapper-social .social-links {
+  display: flex;
+  gap: 40px;
+}
+
+.main {
+  width: 100%;
+  height: 120vh;
+}/*# sourceMappingURL=style.css.map */
